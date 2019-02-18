@@ -1,0 +1,108 @@
+/* 定义公共变量 */
+/* 主题颜色 */
+@main-color: #ff4e49;
+
+/* 公共样式 */
+html {
+  font-size: 26.6667vw;
+}
+
+img {
+  vertical-align: middle;
+}
+
+body {
+  height: 100vh;
+  background-color: #fff;
+
+  .mui-scroll-wrapper {
+    margin-top: 1rem;
+  }
+}
+
+/* 头部结构 */
+#header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: .5rem;
+  background-color: @main-color;
+  display: flex;
+  justify-content: space-between;
+  padding: .1rem .15rem;
+
+  .logo {
+    line-height: .3rem;
+
+    img {
+      width: 1.85rem;
+    }
+  }
+
+  .download img {
+    width: .3rem;
+  }
+}
+// 搜索栏区域
+.content {
+  background-color: #fff;
+  height: 0.5rem;
+  display: flex;
+  padding: 0.1rem;
+  input {
+      text-align: left;
+      font-size: 0.14rem;
+      margin-right: 0.1rem;
+      padding-left: 0.1rem;
+      background-color: #f1f1f1;
+      flex: 1;
+      height: 0.3rem;
+      border-radius: 0.15rem;
+      border: none;
+ }
+  button {
+      background-color: @main-color;
+      width: 0.65rem;
+      height: 0.3rem;
+      color: #fff;
+      border-radius: 0.15rem;
+      border: none;
+ }
+}
+
+/* 尾部结构 */
+#footer {
+  line-height: .34rem;
+  background-color: #232a34;
+
+  .top {
+    display: flex;
+    color: #fff;
+    border-bottom: 1px solid #666;
+
+    >div {
+      flex: auto;
+      text-align: center;
+      font-size: .14rem;
+      border-right: 1px solid #666;
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+
+  .bottom {
+    padding: .15rem 0 .1rem;
+
+    p {
+      text-align: center;
+      margin: 0;
+      font-size: .12rem;
+
+      .download {
+        color: @main-color;
+      }
+    }
+  }
+}

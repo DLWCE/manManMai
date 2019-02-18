@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">  
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>比价搜索</title>
     <link rel="stylesheet" href="../lib/mui/css/mui.css">
@@ -10,26 +11,41 @@
     <link rel="stylesheet/less" href="../less/category.less">
     <script src="../lib/less/less.js"></script>
 </head>
+
 <body>
-    <!-- 头部区域 -->
+    <!-- 头部结构 -->
     <header id="header">
         <div class="logo">
-            <a href="">
-                <img src="" alt="">
-            </a>                                                                                                                                                                                                                                                                                     
+            <img src="/images/header_logo.png" alt="">
         </div>
-        <div class="">
-            <a href="">
-                <img src="" alt="">
-            </a>
+        <div class="download">
+            <img src="/images/header_app.png" alt="">
         </div>
     </header>
+    <!-- 搜索栏 -->
+    <section id="search">
+        <form action="">
+            <input class="search-bar" type="search" name="" id="" placeholder="请输入您想比价的商品">
+            <button class="search-btn" type="button">搜索</button>
+        </form>
+    </section>
 
-
-    
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="top">
+            <div class="login">登录</div>
+            <div class="register">注册</div>
+            <div class="scrool-top"><i class="fa fa-chevron-circle-up"></i> 返回顶部</div>
+        </div>
+        <div class="bottom">
+            <p><span class="download">手机APP下载 </span> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
     <script src="../js/category.js"></script>
     <script src="../lib/zepto/zepto.min.js"></script>
     <script src="../lib/mui/js/mui.js"></script>
     <script src="../lib/artTemplate/template.js"></script>
 </body>
+
 </html>
