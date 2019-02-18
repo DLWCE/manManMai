@@ -1,0 +1,41 @@
+@import 'base.less';
+body {
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  position: static;
+}
+#main {
+  flex:1;
+  padding: .15rem .1rem;
+  form {
+    .vcode {
+      display: flex;
+      justify-content: space-around;
+      height: .4rem;
+      margin-bottom: .15rem;
+      img {
+        width: .66rem;
+      }
+      .getvcode {
+        width: 1.4rem;
+      }
+      button {
+        // flex: 1;
+        background-image: linear-gradient(#fff,#ccc);
+      }
+    }
+    .register-btn {
+      width: 100%;
+      background-color: @main-color;
+      height: .4rem;
+      color: #fff;
+      font-size: .16rem;
+    }
+  }
+}
+
+.mui-toast-container {
+  bottom: 1.6rem;
+}

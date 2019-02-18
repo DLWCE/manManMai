@@ -118,3 +118,39 @@ body .mui-scroll-wrapper {
 #footer .bottom p .download {
   color: #ff4e49;
 }
+body {
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  position: static;
+}
+#main {
+  flex: 1;
+  padding: .15rem .1rem;
+}
+#main form .vcode {
+  display: flex;
+  justify-content: space-around;
+  height: .4rem;
+  margin-bottom: .15rem;
+}
+#main form .vcode img {
+  width: .66rem;
+}
+#main form .vcode .getvcode {
+  width: 1.4rem;
+}
+#main form .vcode button {
+  background-image: linear-gradient(#fff, #ccc);
+}
+#main form .register-btn {
+  width: 100%;
+  background-color: #ff4e49;
+  height: .4rem;
+  color: #fff;
+  font-size: .16rem;
+}
+.mui-toast-container {
+  bottom: 1.6rem;
+}

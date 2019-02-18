@@ -1,0 +1,180 @@
+@import 'base.less';
+
+
+/* 搜索栏 */
+#search {
+  position: absolute;
+  top: .5rem;
+
+  width: 100%;
+  height: .5rem;
+  padding: .1rem;
+
+  form {
+    display: flex;
+
+    .search-bar {
+      height: .3rem;
+      border-radius: .3rem;
+      background-color: #e5e5e5;
+      margin-bottom: 0;
+      text-align: left;
+      font-size: .12rem;
+
+    }
+
+    .search-btn {
+      margin-left: .05rem;
+      padding: 6px 15px;
+      border-radius: .3rem;
+      border: 0 none;
+      color: #fff;
+      background-color: @main-color;
+
+      &:active {
+        background-color: @main-color;
+
+      }
+    }
+
+  }
+}
+
+/* 轮播图 */
+#slide {
+  .slide-img {
+    width: 100%;
+  }
+
+  .swiper-pagination-bullets {
+    bottom: 0rem;
+  }
+}
+
+/* 菜单栏 */
+#menu {
+  padding-top: .1rem;
+
+  .mui-col-xs-3 {
+    text-align: center;
+
+    &.hide {
+      display: none;
+    }
+
+    img {
+      width: .5rem;
+      height: .5rem;
+    }
+
+    p {
+      padding: .1rem 0;
+    }
+  }
+
+  // 动画
+  @keyframes flipInY {
+    from {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+
+    40% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    60% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      opacity: 1;
+    }
+
+    80% {
+      -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+      transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    to {
+      -webkit-transform: perspective(400px);
+      transform: perspective(400px);
+    }
+  }
+
+}
+
+/* 主体结构 */
+#main {
+
+  /* 超级折扣推荐 */
+  #discount {
+    .tit {
+      display: flex;
+      justify-content: space-between;
+      background-color: #ff2644;
+      color: #fff;
+      padding: 0 .1rem;
+      height: .34rem;
+
+      h3 {
+        font-size: .18rem;
+        line-height: .34rem;
+        margin: 0;
+      }
+
+      i.mui-icon-arrowright {
+        line-height: .34rem;
+      }
+    }
+
+    .content {
+      img {
+        max-width: 1rem;
+        width: 1rem;
+        height: 1rem;
+        margin-right: .05rem;
+        font-size: .12rem;
+        line-height: .17rem;
+      }
+      .mui-media::after {
+        left: 0;
+      }
+      p {
+        line-height: .3rem;
+
+        .product-price {
+          color: @main-color;
+        }
+
+        &.product-info {
+          display: flex;
+          justify-content: space-between;
+          font-size: .12rem;
+          span {
+            line-height: .4rem;
+            color: black;
+          }
+        }
+      }
+
+    }
+  }
+
+  /* 更多优惠 */
+  #more {
+    background-color: #efeff4;
+    padding: .12rem;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+
+

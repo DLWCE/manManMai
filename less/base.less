@@ -20,6 +20,63 @@ body {
   }
 }
 
+
+/* 火箭返回顶部公共样式 */
+#rocket {
+  position: fixed;
+  bottom: .2rem;
+  right: .2rem;
+  z-index: 1000;
+  width: .38rem;
+  height: .38rem;
+  color: #858585;
+  background-color: #e4e4e4;
+  text-align: center;
+  line-height: .38rem;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* 导航菜单按钮公共样式 */
+#nav-menu {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  width: .3rem;
+  height: .3rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .5);
+  border: 2px solid #b3b3b3;
+  z-index: 9999;
+  transition: left .6s;
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all .6s;
+    margin-top: -.6rem;
+    margin-left: -.6rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .5);
+    border: 2px solid #b3b3b3;
+    &.hide {
+      transform: scale(0) rotate(450deg);      
+    }
+  }
+  img {
+    width: .28rem;
+    height: .28rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.14rem;
+    margin-top: -0.14rem;
+  }
+}
+
 /* 头部结构 */
 #header {
   position: absolute;
@@ -42,32 +99,6 @@ body {
   .download img {
     width: .3rem;
   }
-}
-// 搜索栏区域
-.content {
-  background-color: #fff;
-  height: 0.5rem;
-  display: flex;
-  padding: 0.1rem;
-  input {
-      text-align: left;
-      font-size: 0.14rem;
-      margin-right: 0.1rem;
-      padding-left: 0.1rem;
-      background-color: #f1f1f1;
-      flex: 1;
-      height: 0.3rem;
-      border-radius: 0.15rem;
-      border: none;
- }
-  button {
-      background-color: @main-color;
-      width: 0.65rem;
-      height: 0.3rem;
-      color: #fff;
-      border-radius: 0.15rem;
-      border: none;
- }
 }
 
 /* 尾部结构 */

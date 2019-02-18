@@ -118,3 +118,77 @@ body .mui-scroll-wrapper {
 #footer .bottom p .download {
   color: #ff4e49;
 }
+body {
+  background-color: #efeff4;
+  padding-top: .5rem;
+}
+#main {
+  margin: .2rem .1rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.2);
+  padding-bottom: .2rem;
+}
+#main .user-icon {
+  text-align: center;
+}
+#main .user-icon i {
+  font-size: 2rem;
+  color: #ccc;
+}
+#main h3 {
+  text-align: center;
+  font-size: .24rem;
+  color: #FF4081;
+  font-weight: 400;
+}
+#main .mui-input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: .2rem .15rem;
+}
+#main .mui-input-group::before,
+#main .mui-input-group::after {
+  background-color: transparent;
+}
+#main .mui-input-group > div {
+  height: .6rem;
+}
+#main .mui-input-group > div label {
+  width: 25%;
+}
+#main .mui-input-group > div input {
+  width: 75%;
+}
+#main .mui-input-group > div label,
+#main .mui-input-group > div input {
+  height: .6rem;
+  line-height: .6rem;
+  padding: 0;
+}
+#main .mui-input-group > div::after {
+  left: 0;
+}
+#main .mui-input-group > div .mui-input-password ~ .mui-icon-eye {
+  top: .2rem;
+}
+#main .user-info {
+  display: flex;
+  justify-content: space-between;
+  color: #FF4081;
+  font-size: .14rem;
+  padding: 0 .15rem;
+}
+#main .login {
+  width: .6rem;
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  font-size: .2rem;
+  color: #fff;
+  background-color: #ff4e49;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 0 0 3px 2px #ff342d;
+}
