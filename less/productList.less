@@ -1,0 +1,79 @@
+@import "base.less";
+
+.nav {
+    width: 100%;
+    >div {
+        margin-top: 1rem;
+        line-height: 0.4rem;
+        background-color: #ebebeb;
+        font-size: 0.14rem;
+        font-family: "Microsoft YaHei";
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem 0.1rem;
+        box-shadow: 0rem 0rem 0.01rem #f0f0f0;
+        span {
+            color: #000;
+        }
+        button {
+            margin-top: 0.05rem;
+            width: 0.48rem;
+            height: 0.3rem;
+            line-height: .1rem;
+            border-radius: 0.05rem;
+            background-color: #ffffff;
+        }
+    }
+}
+#main {
+    .infor {
+        height: 100%;
+        width: 100%;
+        padding: 0.1rem;
+        border-bottom: 0.01rem solid #ccc;
+
+            a {
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                .shop-content {
+                    margin-left: 0.1rem;
+                    .rightFirst {
+                        font-size: 0.14rem;
+                        font-family: "Microsoft YaHei";
+                        color: #000;
+                        height: 0.38rem;
+                   }
+                    .rightSecond {
+                        font-size: 0.2rem;
+                        line-height: 0.45rem;
+                        height: 0.45rem;
+                        font-weight: bold;
+                        color: #ea3900;
+                        font-family: "Microsoft YaHei";
+                        span {
+                            display: inline-block;
+                            width: 0.9rem;
+                            height: 0.18rem;
+                            background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+                            margin-left: 0.42rem;
+                       }
+                   }
+                    .other {
+                        float: right;
+                        padding-right: 0.1rem;
+                        span {
+                            font-size: 0.12rem;
+                            font-family: "Microsoft YaHei";
+                            color: #a1a1a1;
+                            margin-left: 0.1rem;
+                       }
+                   }
+               }
+           }
+       
+   }
+}
+.pagination>li>span:hover{
+    background-color: #337ab7;
+}

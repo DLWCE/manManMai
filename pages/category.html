@@ -29,7 +29,19 @@
             <button class="search-btn" type="button">搜索</button>
         </form>
     </section>
-
+    <!-- 分类区域 -->
+    <section id="category">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-collapse">
+                <a class="mui-navigate-right" href="#">面板1</a>
+                <div class="mui-collapse-content">
+                    <a href="#">
+                        <span>1</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </section>
     <!-- 底部区域 -->
     <footer id="footer">
         <div class="top">
@@ -42,10 +54,37 @@
             <p>m.manmanbuy.com</p>
         </div>
     </footer>
-    <script src="../js/category.js"></script>
+    <!-- 分类页列表模板 -->
+    <script type="text/html" id="categoryTitleTpl">
+        {{ each result value index}}
+        <li class="mui-table-view-cell mui-collapse">
+            <a class="mui-navigate-right" href="#" data-id=" {{ value.titleId }} ">{{value.title}}</a>
+            <div class="mui-collapse-content">
+                <a href="#" >
+                    <span></span>
+                </a>
+            </div>
+        </li>
+        {{ /each }}
+    </script>
+    <!-- 商品分类列表模板 -->
+    <script type="text/html" id="categoryThingTpl">
+        {{ each result value index}}
+            <a href="productList.html?categoryId={{ value.categoryId }}" data-id=" {{ value.titleId }}">
+                <span>{{value.category}}</span>
+            </a>
+        {{ /each }}
+    </script>
+
+
+
+
+
+    <script type="text/html" id="categoryTitleTpl"></script>
     <script src="../lib/zepto/zepto.min.js"></script>
     <script src="../lib/mui/js/mui.js"></script>
-    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/category.js"></script>
 </body>
 
 </html>
