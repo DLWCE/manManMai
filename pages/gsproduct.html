@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买凑单品页面</title>
+    <link rel="icon" href="http://m.manmanbuy.com/favicon.ico">
+    <link rel="stylesheet" href="/lib/mui/css/mui.css">
+    <link rel="stylesheet" href="/lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="/less/gsproduct.less">
+    <script src="/lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部结构 -->
+    <header id="header">
+
+        <div class="left mui-icon mui-icon-back"></div>
+        <p class="hd_tittle">凑单品</p>
+        <div class="download">
+            <img src="/images/header_app.png" alt="">
+        </div>
+
+    </header>
+    <!-- 区域滚动 -->
+    <section class="title">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="#" data-sort="1" data-id="getgsshop" class="active">京东<i class="fa fa-angle-down"></i>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" data-sort="1" data-id="getgsshoparea">价格<i class="fa fa-angle-down"></i>
+            </div>
+            <div class="mui-col-xs-5">
+                <a href="#" class="tag" data-sort="1">全部价格<i class="fa fa-angle-down"></i></a>
+            </div>
+            <div class="mui-col-xs-1 btn-search"><i class="mui-icon mui-icon-search"></i></div>
+        </div>
+    </section>
+    <section class="twoList">
+        <ul class="mui-table-view titleList">
+            <li class="mui-table-view-cell">Item 1</li>
+        </ul>
+    </section>
+    <!-- 主体结构 -->
+    <main id="main">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="mui-row">
+                    <div class="mui-col-xs-6">
+                        <div class="product">
+                            <div class="pic">
+                                <a href=""><img src="http://img12.360buyimg.com/n7/jfs/t3103/311/3227440084/219932/f633d463/57ee0f4eN791bfc85.jpg" alt=""></a>
+                            </div>
+                            <p class="proName">精邦 线上测试请勿使用--定制 白色</p>
+                            <p class="proPrice">¥1.8</p>
+                            <button type="button" class="mui-btn mui-btn-warning btn-coudan">去凑单</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 渲染开始 -->
+    <!-- 渲染店铺名字 -->
+    <script id="shopIdTpl" type="text/html">
+        {{each result value }} {{if value.shopName}}
+        <li class="mui-table-view-cell" data-id="{{value.shopId}}" data-shop="{{value.shopId}}">{{value.shopName}}</li>
+        {{else}}
+        <li class="mui-table-view-cell" data-id="{{value.areaId}}" data-area="{{value.areaId}}">{{value.areaName}}</li>
+        {{/if}} {{/each}}
+    </script>
+    <script id="productIdTpl" type="text/html">
+        {{each result value}}
+        <div class="mui-col-xs-6">
+            <div class="product">
+                <div class="pic">
+                    <a href=""><img src="{{value.productImg}}" alt=""></a>
+                </div>
+                <p class="proName">{{value.productName}}</p>
+                <p class="proPrice">{{value.productPrice}}</p>
+                <button type="button" class="mui-btn mui-btn-warning btn-coudan">去凑单</button>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/lib/zepto/zepto.min.js"></script>
+    <script src="/lib/mui/js/mui.js"></script>
+    <script src="/lib/artTemplate/template-web.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/gsproduct.js"></script>
+</body>
+
+</html>

@@ -88,38 +88,6 @@ body .mui-scroll-wrapper {
 #header .download img {
   width: .3rem;
 }
-<<<<<<< HEAD
-#search {
-  position: absolute;
-  top: .5rem;
-  width: 100%;
-  height: .5rem;
-  padding: .1rem;
-}
-#search form {
-  display: flex;
-}
-#search form .search-bar {
-  height: .3rem;
-  border-radius: .3rem;
-  background-color: #e5e5e5;
-  margin-bottom: 0;
-  text-align: left;
-  font-size: .12rem;
-}
-#search form .search-btn {
-  margin-left: .05rem;
-  padding: 6px 15px;
-  border-radius: .3rem;
-  border: 0 none;
-  color: #fff;
-  background-color: #ff4e49;
-}
-#search form .search-btn:active {
-  background-color: #ff4e49;
-}
-=======
->>>>>>> 146bb4d72d8f39e3cb6b6dff84eef8d00fc7e5ac
 /* 尾部结构 */
 #footer {
   line-height: .34rem;
@@ -149,4 +117,40 @@ body .mui-scroll-wrapper {
 }
 #footer .bottom p .download {
   color: #ff4e49;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  position: static;
+}
+#main {
+  flex: 1;
+  padding: .15rem .1rem;
+}
+#main form .vcode {
+  display: flex;
+  justify-content: space-around;
+  height: .4rem;
+  margin-bottom: .15rem;
+}
+#main form .vcode img {
+  width: .66rem;
+}
+#main form .vcode .getvcode {
+  width: 1.4rem;
+}
+#main form .vcode button {
+  background-image: linear-gradient(#fff, #ccc);
+}
+#main form .register-btn {
+  width: 100%;
+  background-color: #ff4e49;
+  height: .4rem;
+  color: #fff;
+  font-size: .16rem;
+}
+.mui-toast-container {
+  bottom: 1.6rem;
 }

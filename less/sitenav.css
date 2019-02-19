@@ -88,38 +88,6 @@ body .mui-scroll-wrapper {
 #header .download img {
   width: .3rem;
 }
-<<<<<<< HEAD
-#search {
-  position: absolute;
-  top: .5rem;
-  width: 100%;
-  height: .5rem;
-  padding: .1rem;
-}
-#search form {
-  display: flex;
-}
-#search form .search-bar {
-  height: .3rem;
-  border-radius: .3rem;
-  background-color: #e5e5e5;
-  margin-bottom: 0;
-  text-align: left;
-  font-size: .12rem;
-}
-#search form .search-btn {
-  margin-left: .05rem;
-  padding: 6px 15px;
-  border-radius: .3rem;
-  border: 0 none;
-  color: #fff;
-  background-color: #ff4e49;
-}
-#search form .search-btn:active {
-  background-color: #ff4e49;
-}
-=======
->>>>>>> 146bb4d72d8f39e3cb6b6dff84eef8d00fc7e5ac
 /* 尾部结构 */
 #footer {
   line-height: .34rem;
@@ -149,4 +117,53 @@ body .mui-scroll-wrapper {
 }
 #footer .bottom p .download {
   color: #ff4e49;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  background-color: #fe8320;
+  position: relative;
+}
+#header .mui-icon-back {
+  color: #fff;
+}
+#header .hd_tittle {
+  color: #fff;
+  line-height: .3rem;
+  font-size: 0.2rem;
+}
+a {
+  color: black;
+  font-size: 0.14rem;
+}
+body .mui-scroll-wrapper {
+  margin-top: .05rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+#main #nav {
+  padding-bottom: 0.45rem;
+  width: 3.5rem;
+  margin: 0.05rem auto;
+}
+#main #nav .mui-row div {
+  background-color: #efeff4;
+  background: #f4f4f4;
+  padding: 0.05rem;
+  height: 0.4rem;
+  width: auto;
+  line-height: 0.3rem;
+  border: 1px solid #bfbfbf;
+  display: inline-block;
+  margin: 0.05rem;
+  border-radius: 0.03rem;
 }
