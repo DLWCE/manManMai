@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>十大品牌大全</title>
+    <link rel="icon" href="http://m.manmanbuy.com/favicon.ico">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../less/brandTop10.css">
+</head>
+
+<body>
+    <!-- 头部结构 -->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="download">
+            <img src="../images/header_app.png" alt="">
+        </div>
+    </header>
+    <!-- 搜索栏 -->
+    <section id="search">
+        <form>
+            <input class="search-bar" type="search" name="" id="" placeholder="请输入您想比价的商品">
+            <button class="search-btn" type="button">搜索</button>
+        </form>
+    </section>
+
+    <!-- 主体部分 -->
+    <main>
+        <section class="brands">
+            <div class="title">
+                <h4>热门品牌排行</h4>
+            </div>
+            <div class="content mui-table-view">
+            </div>
+        </section>
+        <section class="num">
+            <div class="title">
+                <h4>热门品牌排行</h4>
+            </div>
+            <div class="content mui-table-view">
+                <li class="product">
+                    <div class="left">
+                        <img src="../images/55d2cf3eNc2d117d0.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <p class="tit">乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+                        <p class="price">￥3266.00</p>
+                        <p class=""><a href="">报价(6)</a><a href="">评论(3522)</a></p>
+                    </div>
+                </li>
+            </div>
+        </section>
+        <section class="commentArea">
+            <div class="title">
+                <h4>最新评论</h4>
+            </div>
+            <div class="content">
+            </div>
+        </section>
+    </main>
+    <!-- 尾部结构 -->
+    <footer id="footer">
+        <div class="top">
+            <div class="login">登录</div>
+            <div class="register">注册</div>
+            <div class="scrool-top"><a href="#header"><i class="fa fa-chevron-circle-up"></i> 返回顶部</a></div>
+        </div>
+        <div class="bottom">
+            <p><span class="download">手机APP下载 </span> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 哪个牌子好模板 -->
+    <script type="text/html" id="brandsTpl">
+        {{each result value index}}
+            <li class="mui-table-view-cell">
+            {{if index == 0}}
+            <i class="mui-badge mui-badge-danger">1</i>
+            {{else if index == 1}}
+            <i class="mui-badge mui-badge-warning">2</i>
+            {{else if index == 2}}
+            <i class="mui-badge mui-badge-success">3</i>
+            {{else}}
+            <i class=""></i>
+            {{/if}}
+            {{value.brandName}}</li>
+        {{/each}}
+    </script>
+    <!-- 产品销量排行模板 -->
+    <script type="text/html" id="numTpl">
+        {{each result value}}
+        <li class="product">
+            <div class="left">
+                {{@value.productImg}}
+            </div>
+            <div class="right">
+                <p class="tit">{{value.productName}}</p>
+                <p class="price">{{value.productPrice}}</p>
+                <p class='otherInfo'><a href="">{{value.productQuote}}</a><a href="">{{value.productCom}}</a></p>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 最新评论模板 -->
+    <script type="text/html" id="commentTpl">
+        {{each result value}}
+        <div class="comment">
+            <div class="buyProduct">
+                <div class="left">
+                    {{@value.productImg}}
+                </div>
+                <div class="right">
+                    <p>{{value.productName}}</p>
+                </div>
+            </div>
+            <div class="userComment">
+                <p class="commentInfo">
+                    <span>{{value.comName}}:</span>
+                    <span>{{value.comTime}}</span>
+                </p>
+                <p class="commentContent">
+                        {{value.comContent}}
+                </p>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/brandTop10.js"></script>
+</body>
+
+</html>
