@@ -127,8 +127,14 @@ img {
 }
 #main .productDetail .comment {
   width: 100%;
-  padding: 0.2rem;
+  padding: 0.15rem;
   margin-bottom: .2rem;
+}
+#main .productDetail .comment .form {
+  width: 100%;
+}
+#main .productDetail .comment .form .text {
+  width: 100%;
 }
 #footer {
   height: 1rem;
