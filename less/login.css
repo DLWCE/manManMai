@@ -88,35 +88,6 @@ body .mui-scroll-wrapper {
 #header .download img {
   width: .3rem;
 }
-#search {
-  position: absolute;
-  top: .5rem;
-  width: 100%;
-  height: .5rem;
-  padding: .1rem;
-}
-#search form {
-  display: flex;
-}
-#search form .search-bar {
-  height: .3rem;
-  border-radius: .3rem;
-  background-color: #e5e5e5;
-  margin-bottom: 0;
-  text-align: left;
-  font-size: .12rem;
-}
-#search form .search-btn {
-  margin-left: .05rem;
-  padding: 6px 15px;
-  border-radius: .3rem;
-  border: 0 none;
-  color: #fff;
-  background-color: #ff4e49;
-}
-#search form .search-btn:active {
-  background-color: #ff4e49;
-}
 /* 尾部结构 */
 #footer {
   line-height: .34rem;
@@ -147,43 +118,77 @@ body .mui-scroll-wrapper {
 #footer .bottom p .download {
   color: #ff4e49;
 }
-* {
-  margin: 0;
-  padding: 0;
+body {
+  background-color: #efeff4;
+  padding-top: .5rem;
 }
-img {
-  /* 解决图片和块级元素3px间隙问题 */
-  vertical-align: middle;
+#main {
+  margin: .2rem .1rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 8px -1px rgba(0, 0, 0, 0.2);
+  padding-bottom: .2rem;
 }
-#category .mui-table-view {
-  position: absolute;
-  width: 100%;
-  margin-top: 1rem;
-  background-color: #efefef;
-}
-#category .mui-table-view-cell .mui-navigate-right {
-  font-weight: bold;
-  font-family: "宋体";
-}
-#category .mui-table-view-cell .mui-collapse-content {
-  padding: 0;
-}
-#category .mui-table-view-cell .mui-collapse-content a {
-  display: inline-block;
-  width: 33.33%;
-  float: left;
-  border: 1px solid #ccc;
-}
-#category .mui-table-view-cell .mui-collapse-content a span {
-  display: inline-block;
-  width: 100%;
+#main .user-icon {
   text-align: center;
-  padding: .1rem 0;
-  color: #444242;
-  border-collapse: collapse;
 }
-#footer {
-  position: fixed;
-  bottom: 0;
+#main .user-icon i {
+  font-size: 2rem;
+  color: #ccc;
+}
+#main h3 {
+  text-align: center;
+  font-size: .24rem;
+  color: #FF4081;
+  font-weight: 400;
+}
+#main .mui-input-group {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: .2rem .15rem;
+}
+#main .mui-input-group::before,
+#main .mui-input-group::after {
+  background-color: transparent;
+}
+#main .mui-input-group > div {
+  height: .6rem;
+}
+#main .mui-input-group > div label {
+  width: 25%;
+}
+#main .mui-input-group > div input {
+  width: 75%;
+}
+#main .mui-input-group > div label,
+#main .mui-input-group > div input {
+  height: .6rem;
+  line-height: .6rem;
+  padding: 0;
+}
+#main .mui-input-group > div::after {
+  left: 0;
+}
+#main .mui-input-group > div .mui-input-password ~ .mui-icon-eye {
+  top: .2rem;
+}
+#main .user-info {
+  display: flex;
+  justify-content: space-between;
+  color: #FF4081;
+  font-size: .14rem;
+  padding: 0 .15rem;
+}
+#main .login {
+  width: .6rem;
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  font-size: .2rem;
+  color: #fff;
+  background-color: #ff4e49;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 0 0 3px 2px #ff342d;
 }

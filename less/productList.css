@@ -147,43 +147,83 @@ body .mui-scroll-wrapper {
 #footer .bottom p .download {
   color: #ff4e49;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
-img {
-  /* 解决图片和块级元素3px间隙问题 */
-  vertical-align: middle;
-}
-#category .mui-table-view {
-  position: absolute;
+.nav {
   width: 100%;
+}
+.nav > div {
   margin-top: 1rem;
-  background-color: #efefef;
+  line-height: 0.4rem;
+  background-color: #ebebeb;
+  font-size: 0.14rem;
+  font-family: "Microsoft YaHei";
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0.1rem;
+  box-shadow: 0rem 0rem 0.01rem #f0f0f0;
 }
-#category .mui-table-view-cell .mui-navigate-right {
+.nav > div span {
+  color: #000;
+}
+.nav > div button {
+  margin-top: 0.05rem;
+  width: 0.48rem;
+  height: 0.3rem;
+  line-height: .1rem;
+  border-radius: 0.05rem;
+  background-color: #ffffff;
+}
+#main .infor {
+  height: 100%;
+  width: 100%;
+  padding: 0.1rem;
+  border-bottom: 0.01rem solid #ccc;
+}
+#main .infor a {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+}
+#main .infor a .shop-content {
+  margin-left: 0.1rem;
+}
+#main .infor a .shop-content .rightFirst {
+  font-size: 0.14rem;
+  font-family: "Microsoft YaHei";
+  color: #000;
+  height: 0.38rem;
+}
+#main .infor a .shop-content .rightSecond {
+  font-size: 0.2rem;
+  line-height: 0.45rem;
+  height: 0.45rem;
   font-weight: bold;
-  font-family: "宋体";
+  color: #ea3900;
+  font-family: "Microsoft YaHei";
 }
-#category .mui-table-view-cell .mui-collapse-content {
-  padding: 0;
-}
-#category .mui-table-view-cell .mui-collapse-content a {
+#main .infor a .shop-content .rightSecond span {
   display: inline-block;
-  width: 33.33%;
-  float: left;
-  border: 1px solid #ccc;
+  width: 0.9rem;
+  height: 0.18rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+  margin-left: 0.42rem;
 }
-#category .mui-table-view-cell .mui-collapse-content a span {
-  display: inline-block;
+#main .infor a .shop-content .other {
+  float: right;
+  padding-right: 0.1rem;
+}
+#main .infor a .shop-content .other span {
+  font-size: 0.12rem;
+  font-family: "Microsoft YaHei";
+  color: #a1a1a1;
+  margin-left: 0.1rem;
+}
+.mui-numbox {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.mui-numbox .mui-btn {
+  width: 1rem;
   text-align: center;
-  padding: .1rem 0;
-  color: #444242;
-  border-collapse: collapse;
-}
-#footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  border: 1px solid #000;
 }

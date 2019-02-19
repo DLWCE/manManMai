@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价页面</title>
+    <!-- 引入外部css文件 -->
+    <!-- mui插件css -->
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <!-- 引入字体图标fontAwesom样式 -->
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.min.css">
+    <!-- 引入自己的less文件 -->
+    <link rel="stylesheet/less" href="../less/baicaijia.less">
+    <!-- 引入less解析js文件 -->
+    <script src="../lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <i class="fa fa-angle-left back"></i>
+        <span class="text">白菜价-淘宝内部券</span>
+        <span class="downLoad"><img src="../images/header_app.png" alt=""></span>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <div class="nav-wraper">
+            <div class="nav-title">
+                <div class="nav">
+                        <div class="mui-scroll-wrapper nav-muban">
+                                <div class="quanBu active"><span>全部</span></div>
+                                <div class="mui-scroll" id="nav-scroll">
+                                    <!--这里放置真实显示的DOM内容-->
+                                    <ul class="clearfix nav-list">
+                                        <li class="active"><span>热销</span></li>
+                                        <li><span>热销</span></li>
+                                    </ul>
+                                </div>
+                        </div>
+                </div>
+                <div class="search-menu fa fa-bars"></div>
+            </div>
+            <div class="search hide">
+                <input class="search-input" type="search" placeholder="请输入要搜索的商品">
+                <span class="search-ico">搜索</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="product">
+                <div class="left">
+                    <img src="https://gd2.alicdn.com/imgextra/i2/2551982558/TB2H6XhamiJ.eBjSspiXXbqAFXa_!!2551982558.jpg_400x400.jpg"
+                        alt="">
+                </div>
+                <div class="right">
+                    <p class="product-name mui-ellipsis-2">[包邮] 多功能车载手机支架仪表台</p>
+                    <p class="product-price">卷后 <span>￥0.0</span> <del>￥0</del></p>
+                    <div class="product-zhanbi">
+                        <div class="zb-left"><span class="num">1%</span><span class="son"></span></div>
+                        <div class="zb-right">已领82张</div>
+                    </div>
+                    <div class="youHui"><span class="lingQu">点此领15元优惠券</span><span class="xiaDan">下单链接</span></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="top">
+            <div class="login">登录</div>
+            <div class="register">注册</div>
+            <div class="fanhui fa fa-arrow-circle-up"> 返回顶部</div>
+        </div>
+        <div class="bottom">
+            <div class="text"><span class="first">手机APP下载</span> <span class="second">慢慢卖买手机版</span><span class="third">
+                    -- 掌上比价平台</span></div>
+            <div class="URL">m.manmanbuy.com</div>
+        </div>
+    </footer>
+    <div id="goTop" class="fa fa-arrow-up"></div>
+</body>
+<!-- 生成nav模板 -->
+<script id="navTpl" type="text/html">
+
+    <div class="quanBu active" data-id="{{result[0].titleId}}"><span>{{result[0].title}}</span></div>
+    <div class="mui-scroll">
+        <!--这里放置真实显示的DOM内容-->
+        <ul class="clearfix nav-list">
+            {{each result value key}}
+            {{if key >0}}
+            <li class="" data-id="{{value.titleId}}"><span>{{value.title}}</span></li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+
+</script>
+<!-- 生成product模板 -->
+<script id="productTpl" type="text/html">
+    {{each result value key}}
+    <div class="product">
+            <div class="left">
+                {{@value.productImg}}
+            </div>
+            <div class="right">
+                <p class="product-name mui-ellipsis-2">{{@value.productName}}</p>
+                <p class="product-price">{{@value.productPrice}}</p>
+                <div class="product-zhanbi">
+                    {{@value.productCouponRemain}}
+                </div>
+                <div class="youHui">{{@value.productCoupon}}{{@value.productHref}}</div>
+            </div>
+    </div>
+    {{/each}}
+</script>
+<!-- 引入外部js文件 -->
+<!-- mui插件js -->
+<script src="../lib/mui/js/mui.min.js"></script>
+<!-- 引入zepto插件 -->
+<script src="../lib/zepto/zepto.min.js"></script>
+<!-- 引入artTemplate插件 -->
+<script src="../lib/artTemplate/template-web.js"></script>
+<!-- 引入自己写的js文件 -->
+<script src="../js/baicaijia.js"></script>
+
+</html>

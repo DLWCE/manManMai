@@ -6,17 +6,72 @@
 html {
   font-size: 26.6667vw;
 }
-
 img {
   vertical-align: middle;
 }
-
 body {
   height: 100vh;
   background-color: #fff;
 
   .mui-scroll-wrapper {
     margin-top: 1rem;
+  }
+}
+
+
+/* 火箭返回顶部公共样式 */
+#rocket {
+  position: fixed;
+  bottom: .2rem;
+  right: .2rem;
+  z-index: 1000;
+  width: .38rem;
+  height: .38rem;
+  color: #858585;
+  background-color: #e4e4e4;
+  text-align: center;
+  line-height: .38rem;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* 导航菜单按钮公共样式 */
+#nav-menu {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  width: .3rem;
+  height: .3rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .5);
+  border: 2px solid #b3b3b3;
+  z-index: 9999;
+  transition: left .6s;
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all .6s;
+    margin-top: -.6rem;
+    margin-left: -.6rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .5);
+    border: 2px solid #b3b3b3;
+    &.hide {
+      transform: scale(0) rotate(450deg);      
+    }
+  }
+  img {
+    width: .28rem;
+    height: .28rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.14rem;
+    margin-top: -0.14rem;
   }
 }
 
@@ -30,76 +85,70 @@ body {
   display: flex;
   justify-content: space-between;
   padding: .1rem .15rem;
-
   .logo {
     line-height: .3rem;
-
     img {
       width: 1.85rem;
     }
   }
-
   .download img {
     width: .3rem;
   }
 }
 // 搜索栏区域
-.content {
-  background-color: #fff;
-  height: 0.5rem;
-  display: flex;
-  padding: 0.1rem;
-  input {
+#search {
+  position: absolute;
+  top: .5rem;
+  width: 100%;
+  height: .5rem;
+  padding: .1rem;
+  form {
+    display: flex;
+    .search-bar {
+      height: .3rem;
+      border-radius: .3rem;
+      background-color: #e5e5e5;
+      margin-bottom: 0;
       text-align: left;
-      font-size: 0.14rem;
-      margin-right: 0.1rem;
-      padding-left: 0.1rem;
-      background-color: #f1f1f1;
-      flex: 1;
-      height: 0.3rem;
-      border-radius: 0.15rem;
-      border: none;
- }
-  button {
-      background-color: @main-color;
-      width: 0.65rem;
-      height: 0.3rem;
+      font-size: .12rem;
+    }
+    .search-btn {
+      margin-left: .05rem;
+      padding: 6px 15px;
+      border-radius: .3rem;
+      border: 0 none;
       color: #fff;
-      border-radius: 0.15rem;
-      border: none;
- }
+      background-color: @main-color;
+      &:active {
+        background-color: @main-color;
+      }
+    }
+  }
 }
-
 /* 尾部结构 */
 #footer {
   line-height: .34rem;
   background-color: #232a34;
-
   .top {
     display: flex;
     color: #fff;
     border-bottom: 1px solid #666;
-
     >div {
       flex: auto;
       text-align: center;
       font-size: .14rem;
       border-right: 1px solid #666;
-
       &:last-of-type {
         border-right: none;
       }
     }
   }
-
   .bottom {
     padding: .15rem 0 .1rem;
-
     p {
       text-align: center;
       margin: 0;
       font-size: .12rem;
-
       .download {
         color: @main-color;
       }
