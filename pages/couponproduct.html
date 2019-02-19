@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券</title>
+
+    <script src="../js/rem.js"></script>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <!-- <link rel="stylesheet/less" href="../less/coupon.less"> -->
+    <link rel="stylesheet/less" href="../less/couponproduct.less">
+    <script src="../lib/less/less.js"></script>
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="icon_bar">
+
+            <a href="#" id="mui-icon-comeback" class="mui-icon mui-icon-back"></a>
+
+        </div>
+        <div class="youhui">
+            <p id="title">优惠券</p>
+        </div>
+        <div class="download">
+            <img src="/images/header_app.png" alt="">
+        </div>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+
+       
+        <section>
+            <p>--点餐前初始手机中的优惠券,即可享受优惠--</p>
+            <div class="content">
+            <ul class="mui-table-view list">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;" class="mui-navigate-right">
+                        <img class="mui-media-object mui-pull-left" src="../images/j_sources_img_2016_10_22_190_190_0_575ab3bffff305c81740cbd6ce7aceb4.jpg">
+                        <div class="mui-media-body">
+                            <p class='mui-ellipsis'>C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+                            <p class="price">￥ 28</p>
+                        </div>
+
+                    </a>
+                    <p> 有效期至10月31日 </p>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;" class="mui-navigate-right">
+                        <img class="mui-media-object mui-pull-left" src="../images/j_sources_img_2016_10_22_190_190_0_575ab3bffff305c81740cbd6ce7aceb4.jpg">
+                        <div class="mui-media-body">
+                            <p class='mui-ellipsis'>C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+                            <p>￥ 28</p>
+                        </div>
+
+                    </a>
+                    <p> 有效期至10月31日 </p>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;" class="mui-navigate-right">
+                        <img class="mui-media-object mui-pull-left" src="../images/j_sources_img_2016_10_22_190_190_0_575ab3bffff305c81740cbd6ce7aceb4.jpg">
+                        <div class="mui-media-body">
+                            <p class='mui-ellipsis'>C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+                            <p>￥ 28</p>
+                        </div>
+
+                    </a>
+                    <p> 有效期至10月31日 </p>
+                </li>
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;" class="mui-navigate-right">
+                        <img class="mui-media-object mui-pull-left" src="../images/j_sources_img_2016_10_22_190_190_0_575ab3bffff305c81740cbd6ce7aceb4.jpg">
+                        <div class="mui-media-body">
+                            <p class='mui-ellipsis'>C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+                            <p>￥ 28</p>
+                        </div>
+
+                    </a>
+                    <p> 有效期至10月31日 </p>
+                </li>
+            </ul>
+        </div>
+        </section>
+
+
+    </main>
+
+    <!-- 底部区域 -->
+    <!-- 蒙板区 -->
+    <div id="popup">
+        <a href="#" class="mui-icon mui-icon-arrowleft"></a>
+        <img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt="">
+        <a href="#" class="mui-icon mui-icon-arrowright"></a>
+    </div>
+
+    <script type="text/html" id="tplCouponproduct">
+        {{each result value}}
+    <li class="mui-table-view-cell mui-media ">
+            <a href="javascript:;" class="mui-navigate-right coupondetail" data-index='{{value.couponProductId}}'>
+                <div class="img"  >{{@ value.couponProductImg }}</div>
+                <div class="mui-media-body">                                 
+                    <p class='mui-ellipsis'>{{value.couponProductName}}</p>
+                    <p> {{value.couponProductPrice}}</p>
+                </div>
+                
+            </a>
+            <p> {{value.couponProductTime}} </p>
+        </li>
+    {{/each}}
+</script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/couponproduct.js"></script>
+</body>
+
+</html>
