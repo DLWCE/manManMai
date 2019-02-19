@@ -1,5 +1,9 @@
 $(function () {
-  mmb.navMenu();
+  mmb.navMenu();    // 导航菜单(导航球)
+  mmb.register();   // 底部点击注册按钮点击跳转到登录页面 
+  mmb.login();      // 底部登录按钮点击跳转登录页面
+  mmb.logo();       // 头部logo点击跳转到主页
+  mmb.scroolTop();  //底部返回顶部按钮注册点击返回顶部事件
   // 初始化轮播图
   var mySwiper = new Swiper('.swiper-container', {
     loop: true, // 循环模式选项
@@ -60,21 +64,12 @@ $(function () {
         indicators: false, //是否显示滚动条
         deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
       });
-      mmb.rocket()
+
+      // 
+      mmb.rocket();
 
     }
   });
-
-  // 给返回顶部注册点击事件
-  $('#footer .scrool-top').on('tap', function () {
-    mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 500);
-  });
-
-
-
-
-
-
 
 
   // 导航菜单按钮点击选装

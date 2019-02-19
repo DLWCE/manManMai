@@ -37,13 +37,23 @@ $(function() {
         })
     })
     $('.twoList ul').on('tap', '.mui-table-view-cell', function() {
-        var id = $(this).data('id');
-        console.log(id);
+        // var id = $(this).data('id');
+        var shopid = $(this).data('shop');
+        console.log(shopid);
+        var areaid = $(this).data('area')
+        console.log(areaid);
+        if (areaid == undefined) {
+            areaid = 0;
+        }
+        if (shopid == undefined) {
+            shopid = 0;
+        }
+        // console.log(id);
         $.ajax({
             url: "http://localhost:9090/api/getgsproduct",
             data: {
-                shopid: id,
-                areaid: id
+                shopid: shopid,
+                areaid: areaid
             },
             success: function(data) {
                 console.log(data)

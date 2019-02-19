@@ -67,9 +67,9 @@
     <!-- 渲染店铺名字 -->
     <script id="shopIdTpl" type="text/html">
         {{each result value }} {{if value.shopName}}
-        <li class="mui-table-view-cell" data-id="{{value.shopId}}">{{value.shopName}}</li>
+        <li class="mui-table-view-cell" data-id="{{value.shopId}}" data-shop="{{value.shopId}}">{{value.shopName}}</li>
         {{else}}
-        <li class="mui-table-view-cell" data-id="{{value.areaId}}">{{value.areaName}}</li>
+        <li class="mui-table-view-cell" data-id="{{value.areaId}}" data-area="{{value.areaId}}">{{value.areaName}}</li>
         {{/if}} {{/each}}
     </script>
     <script id="productIdTpl" type="text/html">

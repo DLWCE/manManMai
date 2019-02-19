@@ -1,4 +1,9 @@
 $(function () {
+  
+  mmb.register();   // 底部点击注册按钮点击跳转到登录页面 
+  mmb.login();      // 底部登录按钮点击跳转登录页面
+  mmb.logo();       // 头部logo点击跳转到主页
+
   // 手机验证点击获取验证码
   $('.getvcode-btn').on('tap', function () {
     var getvodeValue = $('.getvcode').val().trim();

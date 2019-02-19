@@ -1,5 +1,9 @@
 $(function () {
 
+  mmb.register();   // 底部点击注册按钮点击跳转到登录页面 
+  mmb.login();      // 底部登录按钮点击跳转登录页面
+  mmb.logo();       // 头部logo点击跳转到主页
+
   $('.login').on('tap', function () {
     var username = $('.username').val().trim();
     var password = $('.password').val().trim();
