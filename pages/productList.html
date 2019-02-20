@@ -37,47 +37,24 @@
     <main id="main">
     </main>
     <!-- 分页按钮区域 -->
-<<<<<<< HEAD
-    <div class="mui-content-padded">
+    <div class="mui-content-padded ">
         <ul class="mui-pager">
             <li class="mui-previous">
-                <a href="#" class="lastPage">
+                <a href="#" class="mui-btn lastPage">
                     上一页
                 </a>
             </li>
             <li class="mui-next">
-                <a href="#" class="nextPage">
+                <a href="#" class="mui-btn nextPage">
                     下一页
                 </a>
             </li>
         </ul>
+        <div class="pageNum">
+            <span class="pageNum1">1</span>/<span class="pageNum2">3</span>
+        </div>
     </div>
-    
-=======
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
-          <li>
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-    </nav>
 
-
-
-
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
     <!-- 底部区域 -->
     <footer id="footer">
         <div class="top">
@@ -96,7 +73,7 @@
         {{ each result value }}
             <div data-title-id=" {{ value.titleId }} ">
                 <div class="content">
-                    <a href="index.html">首页 ></a>
+                    <a href="../index.html">首页 ></a>
                     <a href="category.html">全部分类 ></a>
                     <a href="productList.html?categoryId={{ value.categoryId }}"> {{ value.category }} </a>
                 </div>
@@ -108,11 +85,7 @@
     <script type="text/html" id="productListTpl">
         {{ each result value }}
             <div class='infor'>
-<<<<<<< HEAD
                 <a href="productEetails.html?categoryid={{ value.categoryId }}&productId={{ value.productId }}">
-=======
-                <a href="productDetails.html?categoryid={{ value.categoryId }}&productId={{ value.productId }}">
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
                     <div class="pic">
                         {{#value.productImg}}
                     </div>

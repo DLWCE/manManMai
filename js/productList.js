@@ -8,22 +8,12 @@ $(function () {
                     categoryid: categoryId
                 },
                 success: function (data) {
-<<<<<<< HEAD
-                    // console.log(data)
-=======
-                    console.log(data)
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
                     var html = template('productNavTpl', data);
                     $(".nav").html(html);
                 }
 
             })
-<<<<<<< HEAD
-            var dataPage;
-
-=======
-            // 给主体商品列表渲染
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
+            var pageNext ;
             $.ajax({
                 url: 'http://localhost:9090/api/getproductlist',
                 data: {
@@ -31,26 +21,26 @@ $(function () {
                     pageid: 1
                 },
                 success: function (data) {
-<<<<<<< HEAD
-                    // console.log(data)
-                    var html = template('productListTpl', data);
-                    dataPage = data.result;
-=======
                     console.log(data)
+                    pageNext = Math.ceil(data.totalCount / data.pagesize);
                     var html = template('productListTpl', data);
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
                     $('#main').html(html);
+                    $('.mui-content-padded .pageNum2').html(pageNext);
                 }
             });
 
 
-<<<<<<< HEAD
             // 给主体商品列表渲染和分页按钮
             // 下一页
             var page = 1;
-            console.log(dataPage);
+            
             $('.mui-content-padded .nextPage').on('tap',function(){
-                ++page;
+                if(page < pageNext){
+                    ++page;
+                }else{
+                    $('.mui-content-padded .nextPage').attr('href','javascript:;')
+                }
+                
                 $.ajax({
                     url: 'http://localhost:9090/api/getproductlist',
                     data: {
@@ -58,9 +48,10 @@ $(function () {
                         pageid: page
                     },
                     success: function (data) {
-                        // console.log(data)
+                        console.log(data)
                         var html = template('productListTpl', data);
                         $('#main').html(html);
+                        $('.mui-content-padded .pageNum1').html(page);
                     }
                 });
             })
@@ -69,7 +60,12 @@ $(function () {
             //上一页
             $('.mui-content-padded .lastPage').on('tap',function(){
                 console.log(page);
-                --page;
+                if(page > 1){
+                    --page;
+                }else{
+                    $('.mui-content-padded .lastPage').attr('href','javascript:;')
+                }
+
                 $.ajax({
                     url: 'http://localhost:9090/api/getproductlist',
                     data: {
@@ -77,12 +73,13 @@ $(function () {
                         pageid: page
                     },
                     success: function (data) {
-                        // console.log(data)
                         var html = template('productListTpl', data);
                         $('#main').html(html);
+                        $('.mui-content-padded .pageNum1').html(page);
                     }
                 });
             })
+            // $('.mui-content-padded .pageNum1').html(pageNext);
 
 
 
@@ -94,8 +91,6 @@ $(function () {
 
 
 
-=======
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
                 // 使用网上封装好的正则的方式完成url参数的值的获取
                 function getQueryString(name) {
                     var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');

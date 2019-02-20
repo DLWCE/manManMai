@@ -14,7 +14,6 @@ body {
 body .mui-scroll-wrapper {
   margin-top: 1rem;
 }
-<<<<<<< HEAD
 /* 火箭返回顶部公共样式 */
 #rocket {
   position: fixed;
@@ -69,8 +68,6 @@ body .mui-scroll-wrapper {
   margin-left: -0.14rem;
   margin-top: -0.14rem;
 }
-=======
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
 /* 头部结构 */
 #header {
   position: absolute;
@@ -194,6 +191,12 @@ body .mui-scroll-wrapper {
   font-family: "Microsoft YaHei";
   color: #000;
   height: 0.38rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  -webkit-box-pack: center;
 }
 #main .infor a .shop-content .rightSecond {
   font-size: 0.2rem;
@@ -220,18 +223,20 @@ body .mui-scroll-wrapper {
   color: #a1a1a1;
   margin-left: 0.1rem;
 }
-<<<<<<< HEAD
-.mui-numbox {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.mui-content-padded {
+  position: relative;
 }
-.mui-numbox .mui-btn {
-  width: 1rem;
+.mui-content-padded .pageNum {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.mui-content-padded .pageNum span {
+  display: inline-block;
+  font-size: .18rem;
+  border: 1px solid #ccc;
+  width: .2rem;
   text-align: center;
-  border: 1px solid #000;
-=======
-.pagination > li > span:hover {
-  background-color: #337ab7;
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
+  margin: .08rem;
 }

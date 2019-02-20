@@ -121,9 +121,6 @@ body .mui-scroll-wrapper {
 #footer {
   line-height: .34rem;
   background-color: #232a34;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 #footer .top {
   display: flex;
@@ -182,17 +179,17 @@ img {
   width: 100%;
   text-align: center;
   padding: .1rem 0;
-<<<<<<< HEAD
   color: #444242;
   border-collapse: collapse;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  overflow: hidden;
+  -webkit-box-pack: center;
 }
 #footer {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-=======
-  color: #737373;
-  border-collapse: collapse;
-}
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
