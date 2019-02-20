@@ -4,6 +4,9 @@
 html {
   font-size: 26.6667vw;
 }
+i {
+  font-style: normal;
+}
 img {
   vertical-align: middle;
 }
@@ -69,61 +72,10 @@ body .mui-scroll-wrapper {
   margin-top: -0.14rem;
 }
 /* 头部结构 */
-#header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: .5rem;
-  background-color: #ff4e49;
-  display: flex;
-  justify-content: space-between;
-  padding: .1rem .15rem;
-}
-#header .logo {
-  line-height: .3rem;
-}
-#header .logo img {
-  width: 1.85rem;
-}
-#header .download img {
-  width: .3rem;
-}
-#search {
-  position: absolute;
-  top: .5rem;
-  width: 100%;
-  height: .5rem;
-  padding: .1rem;
-}
-#search form {
-  display: flex;
-}
-#search form .search-bar {
-  height: .3rem;
-  border-radius: .3rem;
-  background-color: #e5e5e5;
-  margin-bottom: 0;
-  text-align: left;
-  font-size: .12rem;
-}
-#search form .search-btn {
-  margin-left: .05rem;
-  padding: 6px 15px;
-  border-radius: .3rem;
-  border: 0 none;
-  color: #fff;
-  background-color: #ff4e49;
-}
-#search form .search-btn:active {
-  background-color: #ff4e49;
-}
 /* 尾部结构 */
 #footer {
   line-height: .34rem;
   background-color: #232a34;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 #footer .top {
   display: flex;
@@ -150,49 +102,106 @@ body .mui-scroll-wrapper {
 #footer .bottom p .download {
   color: #ff4e49;
 }
-* {
-  margin: 0;
-  padding: 0;
+body {
+  display: flex;
+  flex-direction: column;
 }
-img {
-  /* 解决图片和块级元素3px间隙问题 */
-  vertical-align: middle;
-}
-#category .mui-table-view {
-  position: absolute;
+#header {
+  top: 0;
   width: 100%;
-  margin-top: 1rem;
-  background-color: #efefef;
+  height: .5rem;
+  background-color: #ff4e49;
+  display: flex;
+  justify-content: space-between;
+  padding: .1rem .12rem;
 }
-#category .mui-table-view-cell .mui-navigate-right {
-  font-weight: bold;
-  font-family: "宋体";
-}
-#category .mui-table-view-cell .mui-collapse-content {
-  padding: 0;
-}
-#category .mui-table-view-cell .mui-collapse-content a {
-  display: inline-block;
-  width: 33.33%;
-  float: left;
-  border: 1px solid #ccc;
-}
-#category .mui-table-view-cell .mui-collapse-content a span {
-  display: inline-block;
-  width: 100%;
+#header .icon_bar .mui-icon-back {
+  font-size: .3rem;
   text-align: center;
-  padding: .1rem 0;
-<<<<<<< HEAD
-  color: #444242;
-  border-collapse: collapse;
+  line-height: .3rem;
+  color: #ffffff;
 }
-#footer {
+#header .youhui > p {
+  color: #ffffff;
+  font-size: .15rem;
+  text-align: center;
+  line-height: .3rem;
+}
+#header .download img {
+  width: .3rem;
+}
+#main {
+  flex: 1;
+  position: absolute;
+  margin-top: .5rem;
+  padding: .1rem;
+  height: 100%;
+}
+#main section > p {
+  text-align: center;
+  color: #bbb;
+  font-size: .16rem;
+}
+#main section ul {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+}
+#main section ul li a img {
+  width: 1.2rem;
+  height: .5rem;
+}
+#main section ul li a .mui-media-body .mui-ellipsis {
+  color: #000;
+  white-space: normal;
+}
+#main section ul li a .mui-media-body .mui-ellipsis p .price {
+  color: #000;
+  font-size: .17rem;
+}
+#main section ul li > p {
+  text-align: center;
+  font-size: .14rem;
+  color: #EE7700;
+  margin-top: .1rem;
+  z-index: 11;
+}
+#main section ul li .mui-active {
+  background-color: #fff;
+}
+.mui-navigate-right:after,
+.mui-push-right:after {
+  right: 0rem;
+  font-weight: 700;
+  color: #000;
+}
+#popup {
   position: fixed;
-  bottom: 0;
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(51, 51, 51, 0.8);
+  display: none;
 }
-=======
-  color: #737373;
-  border-collapse: collapse;
+#popup .mui-icon-arrowleft {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 10%;
+  transform: translate(50%, -50%);
 }
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
+#popup .mui-icon-arrowright {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+}
+#popup img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

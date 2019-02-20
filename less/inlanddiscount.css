@@ -126,7 +126,11 @@ img {
   opacity: 0.6;
 }
 #footer {
+<<<<<<< HEAD
   height: 100px;
+=======
+  height: 1rem;
+>>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
   width: 100%;
   position: fixed;
   z-index: 999;
@@ -141,7 +145,11 @@ img {
 }
 #footer .nav ul li {
   width: 33.33%;
+<<<<<<< HEAD
   height: 35px;
+=======
+  height: 0.35rem;
+>>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
 }
 #footer .nav ul li:nth-of-type(n + 2) {
   border-left: 1px solid #ccc;
@@ -151,7 +159,11 @@ img {
   width: 100%;
   height: 100%;
   text-align: center;
+<<<<<<< HEAD
   line-height: 35px;
+=======
+  line-height: 0.35rem;
+>>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
   color: #fff;
 }
 #footer .footer-info p {
@@ -163,7 +175,11 @@ img {
   color: #ff4e49;
 }
 #footer .footer-info p.info {
+<<<<<<< HEAD
   margin-top: 10px;
+=======
+  margin-top: 0.1rem;
+>>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
 }
 #footer .footer-info p.webURL {
   color: #666;

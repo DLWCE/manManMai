@@ -14,6 +14,7 @@ body {
 body .mui-scroll-wrapper {
   margin-top: 1rem;
 }
+<<<<<<< HEAD
 /* 火箭返回顶部公共样式 */
 #rocket {
   position: fixed;
@@ -68,6 +69,8 @@ body .mui-scroll-wrapper {
   margin-left: -0.14rem;
   margin-top: -0.14rem;
 }
+=======
+>>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
 /* 头部结构 */
 #header {
   position: absolute;
@@ -217,6 +220,7 @@ body .mui-scroll-wrapper {
   color: #a1a1a1;
   margin-left: 0.1rem;
 }
+<<<<<<< HEAD
 .mui-numbox {
   width: 100%;
   display: flex;
@@ -226,4 +230,8 @@ body .mui-scroll-wrapper {
   width: 1rem;
   text-align: center;
   border: 1px solid #000;
+=======
+.pagination > li > span:hover {
+  background-color: #337ab7;
+>>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
 }

@@ -1,0 +1,83 @@
+@import "base.less";
+body{
+    display: flex;
+    flex-direction: column;
+}
+// 头部
+#header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: .5rem;
+    background-color: @main-color;
+    display: flex;
+    justify-content: space-between;
+    padding: .1rem .15rem;
+  
+    .icon_bar {
+        .mui-icon-back{
+           
+            font-size: .3rem;
+            text-align: center;
+            line-height: .3rem;
+            color: #ffffff;
+        }
+       
+       
+    }
+    .youhui{
+     
+       >p{
+        color: #ffffff;
+        font-size: .15rem;
+        text-align: center;
+        line-height: .3rem;
+
+       }
+    }
+  
+    .download img {
+      width: .3rem;
+    }
+  }
+
+#main{
+    flex: 1;
+    margin-top: 0.5rem;
+    .mui-col-xs-6{
+        padding: 0.05rem;
+        // background-color: pink;
+        .ticket{
+            border: .01rem solid #ccc;
+            display: block;
+            height: 1rem;
+            img{
+                display: block;
+                border-radius: 50%;
+                width: 0.5rem;
+                height: 0.5rem;
+                margin: 0.15rem auto 0;
+            }
+            >p{
+               margin: 0;
+                text-align: center;
+                
+               
+                
+            }
+            
+        }
+
+    }
+    #tocouponpage{
+        background:linear-gradient(to right bottom,#fafafa,#efefef);
+        padding: 0.05rem 0.1rem;
+        font-size: 0.15rem;
+        border-bottom: 0.01rem solid #ccc;
+    }
+}
+
+// 底部
+#footer{
+    height: 1.5rem;
+}

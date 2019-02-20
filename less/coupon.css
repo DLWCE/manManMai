@@ -4,6 +4,9 @@
 html {
   font-size: 26.6667vw;
 }
+i {
+  font-style: normal;
+}
 img {
   vertical-align: middle;
 }
@@ -69,60 +72,6 @@ body .mui-scroll-wrapper {
   margin-top: -0.14rem;
 }
 /* 头部结构 */
-#header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: .5rem;
-  background-color: #ff4e49;
-  display: flex;
-  justify-content: space-between;
-  padding: .1rem .15rem;
-}
-#header .logo {
-  line-height: .3rem;
-}
-#header .logo img {
-  width: 1.85rem;
-}
-#header .download img {
-  width: .3rem;
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
-#search {
-  position: absolute;
-  top: .5rem;
-  width: 100%;
-  height: .5rem;
-  padding: .1rem;
-}
-#search form {
-  display: flex;
-}
-#search form .search-bar {
-  height: .3rem;
-  border-radius: .3rem;
-  background-color: #e5e5e5;
-  margin-bottom: 0;
-  text-align: left;
-  font-size: .12rem;
-}
-#search form .search-btn {
-  margin-left: .05rem;
-  padding: 6px 15px;
-  border-radius: .3rem;
-  border: 0 none;
-  color: #fff;
-  background-color: #ff4e49;
-}
-#search form .search-btn:active {
-  background-color: #ff4e49;
-}
-=======
->>>>>>> 146bb4d72d8f39e3cb6b6dff84eef8d00fc7e5ac
 /* 尾部结构 */
 #footer {
   line-height: .34rem;
@@ -152,4 +101,65 @@ body .mui-scroll-wrapper {
 }
 #footer .bottom p .download {
   color: #ff4e49;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+#header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: .5rem;
+  background-color: #ff4e49;
+  display: flex;
+  justify-content: space-between;
+  padding: .1rem .15rem;
+}
+#header .icon_bar .mui-icon-back {
+  font-size: .3rem;
+  text-align: center;
+  line-height: .3rem;
+  color: #ffffff;
+}
+#header .youhui > p {
+  color: #ffffff;
+  font-size: .15rem;
+  text-align: center;
+  line-height: .3rem;
+}
+#header .download img {
+  width: .3rem;
+}
+#main {
+  flex: 1;
+  margin-top: 0.5rem;
+}
+#main .mui-col-xs-6 {
+  padding: 0.05rem;
+}
+#main .mui-col-xs-6 .ticket {
+  border: .01rem solid #ccc;
+  display: block;
+  height: 1rem;
+}
+#main .mui-col-xs-6 .ticket img {
+  display: block;
+  border-radius: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0.15rem auto 0;
+}
+#main .mui-col-xs-6 .ticket > p {
+  margin: 0;
+  text-align: center;
+}
+#main #tocouponpage {
+  background: linear-gradient(to right bottom, #fafafa, #efefef);
+  padding: 0.05rem 0.1rem;
+  font-size: 0.15rem;
+  border-bottom: 0.01rem solid #ccc;
+}
+#footer {
+  height: 1.5rem;
 }

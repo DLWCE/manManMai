@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../lib/mui/css/mui.css">
     <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet/less" href="../less/productList.less">
+    <link rel="stylesheet/less" href="../less/productDetails.less">
     <script src="../lib/less/less.js"></script>
 </head>
 
@@ -33,51 +33,20 @@
     <!-- 导航栏区域 -->
     <section class="nav">
     </section>
-    <!-- 主体数据区域 -->
-    <main id="main">
-    </main>
-    <!-- 分页按钮区域 -->
-<<<<<<< HEAD
-    <div class="mui-content-padded">
-        <ul class="mui-pager">
-            <li class="mui-previous">
-                <a href="#" class="lastPage">
-                    上一页
-                </a>
-            </li>
-            <li class="mui-next">
-                <a href="#" class="nextPage">
-                    下一页
-                </a>
-            </li>
-        </ul>
+    <!-- 商品详情区域 -->
+    <div class="details">
     </div>
-    
-=======
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
-          <li>
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li>
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-    </nav>
+    <!-- 网友评价区域 -->
+    <div class="evaluate">
+        <div class="evaluate_top">网友评价</div>
+        <div class="evaluate_list">
+            <ul class="evaluate_info">
+
+            </ul>
+        </div>
+    </div>
 
 
-
-
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
     <!-- 底部区域 -->
     <footer id="footer">
         <div class="top">
@@ -90,8 +59,7 @@
             <p>m.manmanbuy.com</p>
         </div>
     </footer>
-
-    <!-- 3级菜单模板 -->
+    <!-- 导航栏区域模板 -->
     <script type="text/html" id="productNavTpl">
         {{ each result value }}
             <div data-title-id=" {{ value.titleId }} ">
@@ -104,29 +72,43 @@
             </div>
         {{ /each }}
     </script>
-    <!-- 主体数据列表模板 -->
-    <script type="text/html" id="productListTpl">
+    <!-- 商品详情区域模板 -->
+    <script type="text/html" id="productMoreTpl">
         {{ each result value }}
-            <div class='infor'>
-<<<<<<< HEAD
-                <a href="productEetails.html?categoryid={{ value.categoryId }}&productId={{ value.productId }}">
-=======
-                <a href="productDetails.html?categoryid={{ value.categoryId }}&productId={{ value.productId }}">
->>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
-                    <div class="pic">
+               <div class="details_image">
+                   <div class="details_more">
+                        <p class='topFirst'> {{ value.productName }} </p>
                         {{#value.productImg}}
-                    </div>
-                    <div class="shop-content">
-                        <p class="rightFirst"> {{ value.productName }} </p>
-                        <p class='rightSecond'>{{ value.productPrice }}</p>
-                        <div class="other clearfix">
-                            <span> {{ value.productCom }} </span>
-                            <span> {{ value.productQuote }} </span>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                        <img src="images/sc.jpg" alt="" class='topSecond'>
+                   </div>
+                   <div class="details_nav">
+                       <ul>
+                           <li>比价购买</li>
+                           <li>产品参数</li>
+                           <li>优选评论</li>
+                       </ul>
+                       {{#value.bjShop}}
+                   </div>
+                   <div class="prompt">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+               </div>
         {{ /each }}
+    </script>
+    <!-- 网友评价区域模板 -->
+    <script type="text/html" id="commentTpl">
+        {{ each result value }}
+            <li>
+                <div class="data">
+                    <div class="userName">{{value.comName}}</div>
+                    <div class="date">{{value.comTime}}</div>
+                </div>
+                <div class="from">
+                    {{value.comFrom}}
+                </div>
+                <div class="evaluate_list_content">
+                    {{value.comContent}}
+                </div>
+            </li>
+        {{/each}}
     </script>
 
 
@@ -139,7 +121,7 @@
     <script src="../lib/bootstrap/js/bootstrap.js"></script>
     <script src="../lib/mui/js/mui.js"></script>
     <script src="../lib/artTemplate/template-web.js"></script>
-    <script src="../js/productList.js"></script>
+    <script src="../js/productDetails.js"></script>
 </body>
 
 </html>

@@ -24,6 +24,7 @@ $(function () {
             }
         }) 
      })
+<<<<<<< HEAD
          //底部按钮添加点击事件
     $('#footer .login').on('tap',function(){
         location = '../pages/login.html'
@@ -31,5 +32,7 @@ $(function () {
     $('#footer .register').on('tap',function(){
         location = '../pages/register.html'
     })
+=======
+>>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
      
 })

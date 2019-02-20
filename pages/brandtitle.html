@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>所有品牌大全</title>
+    <link rel="icon" href="http://m.manmanbuy.com/favicon.ico">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../less/brandtitle.css">
+</head>
+
+<body>
+    <!-- 头部结构 -->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="download">
+            <img src="../images/header_app.png" alt="">
+        </div>
+    </header>
+    <!-- 搜索栏 -->
+    <section id="search">
+        <form action="">
+            <input class="search-bar" type="search" name="" id="" placeholder="请输入您想比价的商品">
+            <button class="search-btn" type="button">搜索</button>
+        </form>
+    </section>
+
+    <!-- 主体部分 -->
+    <main>
+        <!-- 导航部分 -->
+        <nav>
+            <a href="index.html">首页</a>><a href="brandtitle.html">品牌大全</a>
+        </nav>
+        <section class="hot-brands">
+            <div class="title">
+                <h4>热门品牌排行</h4>
+            </div>
+            <div class="content">
+                <ul class="mui-table-view">
+                    
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!-- 尾部结构 -->
+    <footer id="footer">
+        <div class="top">
+            <div class="login">登录</div>
+            <div class="register">注册</div>
+            <div class="scrool-top"><i class="fa fa-chevron-circle-up"></i> 返回顶部</div>
+        </div>
+        <div class="bottom">
+            <p><span class="download">手机APP下载 </span> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script type="text/html" id="hotBrandsTpl">
+        {{each result value}}
+        <li class="mui-table-view-cell">
+            <a href="brandTop10.html?brandtitleid={{value.brandTitleId}}&brandTitle={{value.brandTitle}}" class='mui-navigate-right'>{{value.brandTitle}}</a>
+        </li>
+        {{/each}}
+    </script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/brandtitle.js"></script>
+</body>
+
+</html>

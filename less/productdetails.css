@@ -127,9 +127,21 @@ img {
 }
 #main .productDetail .comment {
   width: 100%;
+<<<<<<< HEAD
   padding: 0.2rem;
   margin-bottom: .2rem;
 }
+=======
+  padding: 0.15rem;
+  margin-bottom: .2rem;
+}
+#main .productDetail .comment .form {
+  width: 100%;
+}
+#main .productDetail .comment .form .text {
+  width: 100%;
+}
+>>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
 #footer {
   height: 1rem;
   width: 100%;
@@ -173,3 +185,22 @@ img {
 #footer .footer-info p.webURL {
   color: #666;
 }
+<<<<<<< HEAD
+=======
+/* 火箭返回顶部公共样式 */
+#rocket {
+  position: fixed;
+  bottom: .2rem;
+  right: .2rem;
+  z-index: 1000;
+  width: .38rem;
+  height: .38rem;
+  color: #858585;
+  background-color: #e4e4e4;
+  text-align: center;
+  line-height: .38rem;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+>>>>>>> 19748d9a52bfd7226d776f85b850462db985887b
