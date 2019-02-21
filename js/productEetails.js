@@ -1,4 +1,6 @@
 $(function () {
+    mmb.logo(); // 头部logo点击跳转到主页
+
     // 渲染导航栏区域
     var categoryId = getQueryString('categoryId');
     console.log(categoryId)

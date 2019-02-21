@@ -19,7 +19,20 @@
 </head>
 
 <body>
-
+    
+    <!-- 导航菜单按钮 -->
+    <div id="nav-menu">
+        <div class="circle hide" data-width="120">
+            <img src="/images/ic_search.png" alt="" data-href="/pages/category.html">
+            <img src="/images/ic_cu.png" alt="" data-href="/pages/moneyctrl.html">
+            <img src="/images/ic_coudanpin.png" alt="" data-href="/pages/inlanddiscount.html">
+            <img src="/images/ic_bcj.png" alt="" data-href="/pages/baicaijia.html">
+            <img src="/images/ic_temai.png" alt="" data-href="/pages/coupon.html">
+            <img src="/images/ic_kb.png" alt="" data-href="/pages/category.html">
+            <img src="/images/ic_mall.png" alt="" data-href="/pages/sitenav.html">
+            <img src="/images/ic_pp.png" alt="" data-href="/pages/brandtitle.html">
+        </div>
+    </div>
     <!-- 头部区域 -->
     <header id="header">
         <a href="javascript:history.back();" class="mui-icon mui-icon-back"></a>
@@ -48,7 +61,7 @@
                 </ul>
             </div>
         </div>
-        
+
     </main>
 
     <!-- 火箭返回顶部 待完善-->
@@ -65,7 +78,7 @@
                     <a href="register.html">注册</a>
                 </li>
                 <li>
-                    <a href="index.html">首页</a>
+                    <a href="../index.html">首页</a>
                 </li>
             </ul>
         </nav>
@@ -77,7 +90,7 @@
 
     <!-- 模板引擎，渲染上数据 -->
     <script type="text/html" id="productlist">
-       {{ each result value index }}
+        {{ each result value index }}
         <li class="product" data-productid="{{value.productId}}">
             <a href="#">
                 <div class="product-img">
@@ -96,6 +109,9 @@
     <script src="../lib/mui/js/mui.min.js"></script>
     <!-- 3.引入模板引擎的js -->
     <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="/lib/fastclick.js"></script>
+
     <!-- 4.引入本页面的js -->
     <script src="../js/inlanddiscount.js"></script>
 </body>

@@ -172,7 +172,7 @@ i,em{
     
  
     .content{
-        padding-bottom: .95rem;
+       
         .product{
             background-color: #fff;
             margin: 0 0 .05rem;
@@ -283,25 +283,24 @@ i,em{
 }
 // 底部区域
 #footer{
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    height: 1rem;
-    background-color: #efeff4;
+    height: 1.28rem;
+    // background-color: #efeff4;
+    background-color: #232a34;
     z-index: 3;
-    left: 0;
     display: flex;
     flex-direction: column;
     .top{
-        border-bottom: 1px solid #ccc;
-        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #666;
+        border-top: 1px solid #666;
         height: .36rem;
         display: flex;
         line-height: .34rem;
         text-align: center;
+        color: #fff;
         .login,.register{
             flex: auto;
-            border-right: 1px solid #ccc;
+            border-right: 1px solid #666;
         }
         .fanhui{
             flex: auto;            
@@ -316,32 +315,33 @@ i,em{
         flex: 1;
         font-size: .12rem;
         text-align: center;
-        padding-top: .08rem;
+        padding-top: .2rem;
         .text{
             line-height: .24rem;
             .first{
                 color: @maincolor;
             }
-            .third{
-                color: #666;
+            .third,.second{
+                color: #8f8f94;
             }
         }
         .URL{
             line-height: .24rem;
-            color: #666;
+            margin-top: .05rem;
+            color: #8f8f94;
         }
     }
 }
 // 返回顶部小按钮
 #goTop{
-    width: .3rem;
-    height: .3rem;
-    background-color: rgba(0,0,0,.3);
+    width: .35rem;
+    height: .35rem;
+    background-color: rgba(0,0,0,.2);
     position: fixed;
     right: .2rem;
     bottom: .3rem;
     text-align: center;
-    line-height: .3rem;
+    line-height: .35rem;
     border-radius: 50%;
     color: #666;
     z-index: 4;

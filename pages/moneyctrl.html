@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
+
+    <link rel="stylesheet/less" href="../less/moneyctrl.less">
+    <script src="../lib/less/less.js"></script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    
+
+</head>
+
+<body>
+    <!-- 导航菜单按钮 -->
+    <div id="nav-menu">
+        <div class="circle hide" data-width="120">
+            <img src="../images/ic_search.png" alt="" data-href="/pages/category.html">
+            <img src="../images/ic_cu.png" alt="" data-href="/pages/moneyctrl.html">
+            <img src="../images/ic_coudanpin.png" alt="" data-href="/pages/inlanddiscount.html">
+            <img src="../images/ic_bcj.png" alt="" data-href="/pages/baicaijia.html">
+            <img src="../images/ic_temai.png" alt="" data-href="/pages/coupon.html">
+            <img src="../images/ic_kb.png" alt="" data-href="/pages/category.html">
+            <img src="../images/ic_mall.png" alt="" data-href="/pages/sitenav.html">
+            <img src="../images/ic_pp.png" alt="" data-href="/pages/brandtitle.html">
+        </div>
+    </div>
+    <!-- 头部结构 -->
+    <header id="header">
+        <div class="logo">
+            <img src="../images/header_logo.png" alt="">
+        </div>
+        <div class="download">
+            <img src="../images/header_app.png" alt="">
+        </div>
+    </header>
+    <main id="main">
+        <a id="huiqu"></a>
+        <ul class="mui-table-view proList">
+
+        </ul>
+    </main>
+    <!-- 分页区域 -->
+    <section id="paging">
+        <a href="javascript:queryData(pageCurent-1);" class="mui-btn mui-btn-outlined previous" id="ppp">上一页</a>
+        <!-- <a href="#" class="mui-btn mui-btn-outlined">上一页</a> -->
+        <select name="selectAge" id="selectAge">
+
+        </select>
+        <!-- <a href="#" class="mui-btn mui-btn-outlined">下一页</a> -->
+        <a href="javascript:queryData(pageCurent+1);;" class="mui-btn mui-btn-outlined " id="next">下一页</a>
+    </section>
+    <!-- 尾部结构 -->
+    <footer id="footer">
+        <div class="top">
+            <div class="login">登录</div>
+            <div class="register">注册</div>
+
+            <a href="#" id="toTop">
+                <i class="fa fa-chevron-circle-up"></i>
+                返回顶部
+            </a>
+        </div>
+
+        <div class="bottom">
+            <p><span class="download">手机APP下载 </span> 慢慢买手机版 -- 掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script id='tplMoneyCtrl' type="text/html">
+    {{each result value index}}
+    <li class="mui-table-view-cell mui-media">
+            <a href="save-sale.html?id={{value.productId}}">
+                    {{@value.productImgSm}}
+                <div class="mui-media-body">
+                    
+                    <p class='proName'>{{value.productName}}<span>{{value.productPinkage}}</span></p>
+                    <p class="mui-ellipsis">
+                        <span class="mui-pull-left">{{value.productFrom}}|{{value.productTime}}</span>
+                        <span class="mui-pull-right"><i class="fa fa-commenting-o">{{value.productComCount.replace('有','').replace('人评论','')}}</i></span>
+                    </p>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</script>
+<script src="/lib/fastclick.js"></script>
+
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/moneyctrl.js"></script>

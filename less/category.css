@@ -155,8 +155,10 @@ img {
   /* 解决图片和块级元素3px间隙问题 */
   vertical-align: middle;
 }
+body {
+  height: 5.67rem;
+}
 #category .mui-table-view {
-  position: absolute;
   width: 100%;
   margin-top: 1rem;
   background-color: #efefef;
@@ -167,6 +169,8 @@ img {
 }
 #category .mui-table-view-cell .mui-collapse-content {
   padding: 0;
+  border-bottom: 2px solid #000;
+  background-color: #f9f9f9;
 }
 #category .mui-table-view-cell .mui-collapse-content a {
   display: inline-block;
@@ -175,11 +179,13 @@ img {
   border: 1px solid #ccc;
 }
 #category .mui-table-view-cell .mui-collapse-content a span {
+  font-size: .14rem;
   display: inline-block;
   width: 100%;
   text-align: center;
   padding: .1rem 0;
   color: #444242;
+  background-color: #f9f9f9;
   border-collapse: collapse;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -189,7 +195,6 @@ img {
   -webkit-box-pack: center;
 }
 #footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  height: 2.23rem;
 }

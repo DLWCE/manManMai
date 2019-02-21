@@ -10,15 +10,29 @@
     <link rel="stylesheet" href="../lib/fontAwesome/css/font-awesome.css">
     <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="../less/brandTop10.css">
+    <!-- <script src="../lib/less/less.js"></script> -->
 </head>
 
 <body>
+      <!-- 导航菜单按钮 -->
+      <div id="nav-menu">
+            <div class="circle hide" data-width="120">
+                <img src="/images/ic_search.png" alt="" data-href="/pages/category.html">
+                <img src="/images/ic_cu.png" alt="" data-href="/pages/moneyctrl.html">
+                <img src="/images/ic_coudanpin.png" alt="" data-href="/pages/inlanddiscount.html">
+                <img src="/images/ic_bcj.png" alt="" data-href="/pages/baicaijia.html">
+                <img src="/images/ic_temai.png" alt="" data-href="/pages/coupon.html">
+                <img src="/images/ic_kb.png" alt="" data-href="/pages/category.html">
+                <img src="/images/ic_mall.png" alt="" data-href="/pages/sitenav.html">
+                <img src="/images/ic_pp.png" alt="" data-href="/pages/brandtitle.html">
+            </div>
+        </div>
     <!-- 头部结构 -->
     <header id="header">
         <div class="logo">
-            <a href="index.html">
+            <!-- <a href="index.html"> -->
                 <img src="../images/header_logo.png" alt="">
-            </a>
+            <!-- </a> -->
         </div>
         <div class="download">
             <img src="../images/header_app.png" alt="">
@@ -33,7 +47,7 @@
     </section>
 
     <!-- 主体部分 -->
-    <main>
+    <main id="main">
         <section class="brands">
             <div class="title">
                 <h4>热门品牌排行</h4>
@@ -71,7 +85,7 @@
         <div class="top">
             <div class="login">登录</div>
             <div class="register">注册</div>
-            <div class="scrool-top"><a href="#header"><i class="fa fa-chevron-circle-up"></i> 返回顶部</a></div>
+            <div class="scrool-top"><a href="#main"><i class="fa fa-chevron-circle-up"></i> 返回顶部</a></div>
         </div>
         <div class="bottom">
             <p><span class="download">手机APP下载 </span> 慢慢买手机版 -- 掌上比价平台</p>
@@ -136,6 +150,9 @@
     <script src="../lib/zepto/zepto.min.js"></script>
     <script src="../lib/mui/js/mui.min.js"></script>
     <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/lib/fastclick.js"></script>
+
     <script src="../js/brandTop10.js"></script>
 </body>
 

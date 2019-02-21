@@ -157,9 +157,6 @@ em {
   line-height: .38rem;
   font-size: .14rem;
 }
-#main .content {
-  padding-bottom: .95rem;
-}
 #main .content .product {
   background-color: #fff;
   margin: 0 0 .05rem;
@@ -261,28 +258,26 @@ em {
   color: #fff;
 }
 #footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  height: 1rem;
-  background-color: #efeff4;
+  height: 1.28rem;
+  background-color: #232a34;
   z-index: 3;
-  left: 0;
   display: flex;
   flex-direction: column;
 }
 #footer .top {
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #666;
+  border-top: 1px solid #666;
   height: .36rem;
   display: flex;
   line-height: .34rem;
   text-align: center;
+  color: #fff;
 }
 #footer .top .login,
 #footer .top .register {
   flex: auto;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #666;
 }
 #footer .top .fanhui {
   flex: auto;
@@ -295,7 +290,7 @@ em {
   flex: 1;
   font-size: .12rem;
   text-align: center;
-  padding-top: .08rem;
+  padding-top: .2rem;
 }
 #footer .bottom .text {
   line-height: .24rem;
@@ -303,22 +298,24 @@ em {
 #footer .bottom .text .first {
   color: #f4483e;
 }
-#footer .bottom .text .third {
-  color: #666;
+#footer .bottom .text .third,
+#footer .bottom .text .second {
+  color: #8f8f94;
 }
 #footer .bottom .URL {
   line-height: .24rem;
-  color: #666;
+  margin-top: .05rem;
+  color: #8f8f94;
 }
 #goTop {
-  width: .3rem;
-  height: .3rem;
-  background-color: rgba(0, 0, 0, 0.3);
+  width: .35rem;
+  height: .35rem;
+  background-color: rgba(0, 0, 0, 0.2);
   position: fixed;
   right: .2rem;
   bottom: .3rem;
   text-align: center;
-  line-height: .3rem;
+  line-height: .35rem;
   border-radius: 50%;
   color: #666;
   z-index: 4;

@@ -1,7 +1,7 @@
 $(function () {
 
   mmb.register();   // 底部点击注册按钮点击跳转到登录页面 
-  mmb.login();      // 底部登录按钮点击跳转登录页面
+  // mmb.login();      // 底部登录按钮点击跳转登录页面
   mmb.logo();       // 头部logo点击跳转到主页
 
   $('.login').on('tap', function () {
@@ -25,13 +25,13 @@ $(function () {
 
     // 获取传递过来的url
     var url = getQueryString('returnUrl');
-      if (url) {
-        // 有则跳转链接过来的页面
-        location = url;
-      }else {
+      // if (url) {
+      //   // 有则跳转链接过来的页面
+      //   location = url;
+      // }else {
         // 没有则跳到主页
         location = '/index.html';
-      }
+      // }
   })
 
   // 点击注册跳转注册页面

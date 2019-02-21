@@ -1,22 +1,24 @@
 var mmb = {
-
   // 火箭(返回顶部按钮) 注册点击事件
   rocket: function () {
     // 滚动到一定距离显示/隐藏火箭(返回顶部按钮)
     var scroll = mui('.mui-scroll-wrapper').scroll();
     document.querySelector('.mui-scroll-wrapper').addEventListener('scroll', function (e) {
-
+      
       // 超过200px显示 -  否则隐藏
       if (scroll.y < -200) {
         $('#rocket').css({
-          opacity: 1
+          opacity: 1,
+          // display: 'block'
         })
       } else {
         $('#rocket').css({
-          opacity: 0
+          opacity: 0,
+          // display: 'none'
         })
       }
     });
+    
 
     // 火箭按钮点击回到顶部
     $('#rocket').on('tap', function () {
@@ -84,12 +86,12 @@ var mmb = {
     })
     //  设置导航菜单吸顶效果 -> 吸附左边 / 吸附右边
     $('#nav-menu').on('touchend', function (e) {
+      
       // 获取手指离开的时间
       var nowTime = Date.now() - oldTime;
       // 获取手指离开的x,y值
       var x = e.changedTouches[0].clientX;
       var y = e.changedTouches[0].clientY;
-
       // 获取屏幕的大小
       var width = $('body').width();
       var height = $('body').height();

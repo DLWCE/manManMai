@@ -1,0 +1,87 @@
+@import 'base.less';
+
+body {
+ height: 100vh;
+
+}
+//头部样式覆盖
+#header {
+    position: fixed;
+    z-index: 999;
+}
+//主体结构
+#main {
+    margin-top: .5rem;
+    .proList {
+        .mui-media {
+            >a {
+                padding: inherit;
+                display: flex;
+
+                >img {
+                    width: 1rem;
+                    height: 1rem;
+                    max-width: 1rem;
+                }
+
+                .mui-media-body {
+                    padding-left: .1rem;
+                    flex: 1;
+
+                    .proName {
+                        color: black;
+                        white-space: normal;
+                        margin-bottom: .15rem;
+
+                        span {
+                            color: @main-color;
+                            font-size: .14rem;
+                        }
+
+                    }
+                }
+            }
+
+        }
+    }
+}
+//分页
+#paging {
+    padding: .1rem .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        margin: .25rem;
+        flex: 1;
+        height: .4rem;
+        background-color: #d4d4d4;
+        box-shadow: 0 0 .05rem .02rem #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #selectAge {
+
+        text-align: center;
+        margin: 0;
+        flex: 1;
+        height: 0.4rem;
+        border: 1px solid #ccc !important;
+    }
+}
+//底部样式覆盖
+#footer {
+    .top{
+        a{
+            flex: auto;
+            text-align: center;
+            font-size: .14rem;
+            border-left: 1px solid #666;
+            color: #fff
+        }
+    }
+   
+}

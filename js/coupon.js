@@ -25,8 +25,11 @@ $(function(){
 
         }
     });
-
-
+// 火箭按钮点击回到顶部
+$('#rocket').on('tap', function () {
+    mui('.mui-scroll-wrapper').scroll().scrollTo(0, 0, 500);
+  });
+    mmb.navMenu();    // 导航菜单(导航球)
 
 
 

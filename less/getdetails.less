@@ -1,0 +1,161 @@
+@import 'base.less';
+#header{
+    position: fixed;
+    z-index: inherit;
+}
+
+//主体部分
+#main {
+
+    margin-top: .5rem;
+ 
+    padding: .15rem;
+    
+    .price {
+
+        color: #ff4e49;
+        font-weight: bold;
+        font-size: .15rem;
+    }
+
+    .sauce {
+        width: 2.15rem;
+        height: 2.15rem;
+        img{
+            width: 100%;
+        }
+    }
+
+    .info {
+        font-size: .12rem;
+        color: #999;
+        padding: .1rem 0;
+    }
+
+    .particulars {
+       
+        display: flex;
+
+        p:first-child {
+            flex: 1;
+            font-size: .16rem;
+        }
+
+        .images {
+            width: 1.1rem;
+      
+          
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .activity{
+        margin: .5rem 0;
+        font-size: .16rem;
+    }
+
+    .buy {
+        width: 100%;
+        background-color: @main-color;
+        height: .36rem;
+        line-height: .36rem;
+        display: block;
+        text-align: center;
+        border-radius: .05rem;
+        color: #fff;
+    }
+}
+//评论区域
+#comment{
+    padding: .1rem;
+    li{
+        list-style: none;
+        margin-bottom: .2rem;
+    }
+    .form {
+        position: relative;
+        .tjdp{
+            bottom: .21rem;
+            right: 0;
+            position: absolute;
+            background-color: @main-color;
+            border:none;
+        }
+    }
+
+    .list{
+        >ul{
+            padding-left: 0;
+            li{
+                .userimg{
+                    float: left;
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    max-width: 0.6rem;
+                    border-radius: 0.6rem;
+                    overflow: hidden;
+                    margin-right: .15rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .con{
+                    .name{
+                        height: .25rem;
+                    }
+                    font-size:.12rem; 
+                    .username{
+                        float: left;
+                        color: skyblue;
+
+                    }
+
+                    .time{
+                        float: right;
+                        color: #999;
+                    }
+
+                    .content{
+                        font-size: .14rem;
+                        color: #606060;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+//底部样式覆盖
+#footer {
+    .top{
+        a{
+            flex: auto;
+            text-align: center;
+            font-size: .14rem;
+            border-left: 1px solid #666;
+            color: #fff
+        }
+    }
+   
+}
+
+.mui-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    background-color: rgba(0,0,0,.3);
+}
+
+.mui-slider {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}

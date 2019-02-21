@@ -1,3 +1,41 @@
+/* 导航菜单按钮公共样式 */
+#nav-menu {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  width: .3rem;
+  height: .3rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #b3b3b3;
+  z-index: 9999;
+  transition: left .6s;
+}
+#nav-menu .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all .6s;
+  margin-top: -0.6rem;
+  margin-left: -0.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #b3b3b3;
+}
+#nav-menu .circle.hide {
+  transform: scale(0) rotate(450deg);
+}
+#nav-menu img {
+  width: .28rem;
+  height: .28rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -0.14rem;
+  margin-top: -0.14rem;
+}
 html {
   font-size: 26.67vw;
   height: 100%;
@@ -126,7 +164,7 @@ img {
   opacity: 0.6;
 }
 #footer {
-  height: 100px;
+  height: 1rem;
   width: 100%;
   position: fixed;
   z-index: 999;

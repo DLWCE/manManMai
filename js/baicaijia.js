@@ -1,6 +1,6 @@
 $(function () {
     var currentId =0;
-    $(window).scrollTop(0);
+    // $(window).scrollTop(0);
     console.log($(window).scrollTop());
     // 从上之下添加功能
     // 点击返回按钮，返回上一页
@@ -91,8 +91,9 @@ $(function () {
         if(disTT <= disT){
             disTT = disT;
         }
-        $('.mui-scroll').css('transform',"translate3d("+disTT+"px, 0px, 0px)");
-        
+        // $('.mui-scroll').css('transition','all 1s');
+        // $('.mui-scroll').css('transform',"translate3d("+disTT+"px, 0px, 0px)");
+        mui('.mui-scroll-wrapper').scroll().scrollTo(disTT,0,100);//100毫秒滚动到顶
    
         currentId = $(this).data('id');
         queryProduct();
@@ -103,8 +104,9 @@ $(function () {
         $('.nav-list li').removeClass('active');
         $(window).scrollTop($('#header').height());
         // 当点击全部按钮时，scroll移动至最右端
-        $('.mui-scroll').css('transform',"translate3d(0px, 0px, 0px)");
-
+        // $('.mui-scroll').css('transition','all 1s');
+        // $('.mui-scroll').css('transform',"translate3d(0px, 0px, 0px)");
+        mui('.mui-scroll-wrapper').scroll().scrollTo(0,0,100);//100毫秒滚动到顶
         currentId = $(this).data('id');
         queryProduct();
     })
